@@ -1,0 +1,282 @@
+﻿[
+	{
+		"Codigo": 7,
+		"Nome": "Aposentadoria por idade do trabalhador rural"
+	},
+	{
+		"Codigo": 8,
+		"Nome": "Aposentadoria por idade do empregador rural"
+	},
+	{
+		"Codigo": 41,
+		"Nome": "Aposentadoria por idade"
+	},
+	{
+		"Codigo": 52,
+		"Nome": "Aposentadoria por idade (Extinto Plano Básico)"
+	},
+	{
+		"Codigo": 78,
+		"Nome": "Aposentadoria por idade de ex-combatente marítimo (Lei nº 1.756/52)"
+	},
+	{
+		"Codigo": 81,
+		"Nome": "Aposentadoria por idade compulsória (Ex-SASSE)"
+	},
+	{
+		"Codigo": 4,
+		"Nome": "Aposentadoria por invalidez do trabalhador rural"
+	},
+	{
+		"Codigo": 6,
+		"Nome": "Aposentadoria por invalidez do empregador rural"
+	},
+	{
+		"Codigo": 32,
+		"Nome": "Aposentadoria por invalidez previdenciária"
+	},
+	{
+		"Codigo": 33,
+		"Nome": "Aposentadoria por invalidez de aeronauta"
+	},
+	{
+		"Codigo": 34,
+		"Nome": "Aposentadoria por invalidez de ex-combatente marítimo (Lei nº 1.756/52)"
+	},
+	{
+		"Codigo": 51,
+		"Nome": "Aposentadoria por invalidez (Extinto Plano Básico)"
+	},
+	{
+		"Codigo": 83,
+		"Nome": "Aposentadoria por invalidez (Ex-SASSE)"
+	},
+	{
+		"Codigo": 42,
+		"Nome": "Aposentadoria por tempo de contribuição previdenciária"
+	},
+	{
+		"Codigo": 43,
+		"Nome": "Aposentadoria por tempo de contribuição de ex-combatente"
+	},
+	{
+		"Codigo": 44,
+		"Nome": "Aposentadoria por tempo de contribuição de aeronauta"
+	},
+	{
+		"Codigo": 45,
+		"Nome": "Aposentadoria por tempo de contribuição de jornalista profissional"
+	},
+	{
+		"Codigo": 46,
+		"Nome": "Aposentadoria por tempo de contribuição especial"
+	},
+	{
+		"Codigo": 49,
+		"Nome": "Aposentadoria por tempo de contribuição ordinária"
+	},
+	{
+		"Codigo": 57,
+		"Nome": "Aposentadoria por tempo de contribuição de professor (Emenda Const.18/81)"
+	},
+	{
+		"Codigo": 72,
+		"Nome": "Apos. por tempo de contribuição de ex-combatente marítimo (Lei 1.756/52)"
+	},
+	{
+		"Codigo": 82,
+		"Nome": "Aposentadoria por tempo de contribuição (Ex-SASSE)"
+	},
+	{
+		"Codigo": 1,
+		"Nome": "Pensão por morte do trabalhador rural"
+	},
+	{
+		"Codigo": 3,
+		"Nome": "Pensão por morte do empregador rural"
+	},
+	{
+		"Codigo": 21,
+		"Nome": "Pensão por morte previdenciária"
+	},
+	{
+		"Codigo": 23,
+		"Nome": "Pensão por morte de ex-combatente"
+	},
+	{
+		"Codigo": 27,
+		"Nome": "Pensão por morte de servidor público federal com dupla aposentadoria"
+	},
+	{
+		"Codigo": 28,
+		"Nome": "Pensão por morte do Regime Geral (Decreto nº 20.465/31)"
+	},
+	{
+		"Codigo": 29,
+		"Nome": "Pensão por morte de ex-combatente marítimo (Lei nº 1.756/52)"
+	},
+	{
+		"Codigo": 55,
+		"Nome": "Pensão por morte (Extinto Plano Básico)"
+	},
+	{
+		"Codigo": 84,
+		"Nome": "Pensão por morte (Ex-SASSE)"
+	},
+	{
+		"Codigo": 13,
+		"Nome": "Auxílio-doença do trabalhador rural"
+	},
+	{
+		"Codigo": 15,
+		"Nome": "Auxílio-reclusão do trabalhador rural"
+	},
+	{
+		"Codigo": 25,
+		"Nome": "Auxílio-reclusão"
+	},
+	{
+		"Codigo": 31,
+		"Nome": "Auxílio-doença previdenciário"
+	},
+	{
+		"Codigo": 36,
+		"Nome": "Auxílio Acidente"
+	},
+	{
+		"Codigo": 50,
+		"Nome": "Auxílio-doença  (Extinto Plano Básico)"
+	},
+	{
+		"Codigo": 2,
+		"Nome": "Pensão por morte por acidente do trabalho do trabalhador rural"
+	},
+	{
+		"Codigo": 5,
+		"Nome": "Aposentadoria por invalidez por acidente do trabalho do trabalhador Rural"
+	},
+	{
+		"Codigo": 10,
+		"Nome": "Auxílio-doença por acidente do trabalho do trabalhador rural"
+	},
+	{
+		"Codigo": 91,
+		"Nome": "Auxílio-doença por acidente do trabalho"
+	},
+	{
+		"Codigo": 92,
+		"Nome": "Aposentadoria por invalidez por acidente do trabalho"
+	},
+	{
+		"Codigo": 93,
+		"Nome": "Pensão por morte por acidente do trabalho"
+	},
+	{
+		"Codigo": 94,
+		"Nome": "Auxílio-acidente por acidente do trabalho"
+	},
+	{
+		"Codigo": 95,
+		"Nome": "Auxílio-suplementar por acidente do trabalho"
+	},
+	{
+		"Codigo": 11,
+		"Nome": "Renda mensal vitalícia por invalidez do trabalhador rural (Lei nº 6.179/74)"
+	},
+	{
+		"Codigo": 12,
+		"Nome": "Renda mensal vitalícia por idade do trabalhador rural (Lei nº 6.179/74)"
+	},
+	{
+		"Codigo": 30,
+		"Nome": "Renda mensal vitalícia por invalidez (Lei nº 6179/74)"
+	},
+	{
+		"Codigo": 40,
+		"Nome": "Renda mensal vitalícia por idade (Lei nº 6.179/74)"
+	},
+	{
+		"Codigo": 85,
+		"Nome": "Pensão mensal vitalícia do seringueiro (Lei nº 7.986/89)"
+	},
+	{
+		"Codigo": 86,
+		"Nome": "Pensão mensal vitalícia do dep.do seringueiro (Lei nº 7.986/89)"
+	},
+	{
+		"Codigo": 87,
+		"Nome": "Amparo assistencial ao portador de deficiência (LOAS)"
+	},
+	{
+		"Codigo": 88,
+		"Nome": "Amparo assistencial ao idoso (LOAS)"
+	},
+	{
+		"Codigo": 47,
+		"Nome": "Abono de permanência em serviço 25%"
+	},
+	{
+		"Codigo": 48,
+		"Nome": "Abono de permanência em serviço 20%"
+	},
+	{
+		"Codigo": 68,
+		"Nome": "Pecúlio especial de aposentadoria"
+	},
+	{
+		"Codigo": 79,
+		"Nome": "Abono de servidor aposentado pela autarquia empr.(Lei 1.756/52)"
+	},
+	{
+		"Codigo": 80,
+		"Nome": "Salário-maternidade"
+	},
+	{
+		"Codigo": 22,
+		"Nome": "Pensão por morte estatutária"
+	},
+	{
+		"Codigo": 26,
+		"Nome": "Pensão Especial (Lei nº 593/48)"
+	},
+	{
+		"Codigo": 37,
+		"Nome": "Aposentadoria de extranumerário da União"
+	},
+	{
+		"Codigo": 38,
+		"Nome": "Aposentadoria da extinta CAPIN"
+	},
+	{
+		"Codigo": 54,
+		"Nome": "Pensão especial vitalícia (Lei nº 9.793/99)"
+	},
+	{
+		"Codigo": 56,
+		"Nome": "Pensão mensal vitalícia por síndrome de talidomida (Lei nº 7.070/82)"
+	},
+	{
+		"Codigo": 58,
+		"Nome": "Aposentadoria excepcional do anistiado (Lei nº 6.683/79)"
+	},
+	{
+		"Codigo": 59,
+		"Nome": "Pensão por morte excepcional do anistiado (Lei nº 6.683/79)"
+	},
+	{
+		"Codigo": 60,
+		"Nome": "Pensão especial mensal vitalícia (Lei 10.923, de 24/07/2004)"
+	},
+	{
+		"Codigo": 76,
+		"Nome": "Salário-família estatutário da RFFSA (Decreto-lei nº 956/69)"
+	},
+	{
+		"Codigo": 89,
+		"Nome": "Pensão especial aos depedentes de vítimas fatais p/ contaminação na hemodiálise"
+	},
+	{
+		"Codigo": 96,
+		"Nome": "Pensão especial às pessoas atingidas pela hanseníase (Lei nº 11.520/2007)"
+	}
+]

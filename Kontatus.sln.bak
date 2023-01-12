@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kontatus.API", "ConsigIntegra.API\Kontatus.API.csproj", "{577A0E61-DD0F-49DF-BB1D-37A16CF866BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kontatus.Domain", "ConsigIntegra.Domain\Kontatus.Domain.csproj", "{480F1B11-75E6-4477-A567-9D81F59DCF47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kontatus.Data", "ConsigIntegra.Data\Kontatus.Data.csproj", "{60491748-599E-4E75-88C1-A8F9E9C58523}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kontatus.Service", "ConsigIntegra.Service\Kontatus.Service.csproj", "{269C9C4F-06B5-4A8C-95B6-4D1FCBAFA85E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kontatus.Helper", "ConsigIntegra.Helper\Kontatus.Helper.csproj", "{DFD2270B-A93E-4A29-BE73-A0B97AD3116A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{577A0E61-DD0F-49DF-BB1D-37A16CF866BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577A0E61-DD0F-49DF-BB1D-37A16CF866BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577A0E61-DD0F-49DF-BB1D-37A16CF866BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577A0E61-DD0F-49DF-BB1D-37A16CF866BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480F1B11-75E6-4477-A567-9D81F59DCF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480F1B11-75E6-4477-A567-9D81F59DCF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480F1B11-75E6-4477-A567-9D81F59DCF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480F1B11-75E6-4477-A567-9D81F59DCF47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60491748-599E-4E75-88C1-A8F9E9C58523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60491748-599E-4E75-88C1-A8F9E9C58523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60491748-599E-4E75-88C1-A8F9E9C58523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60491748-599E-4E75-88C1-A8F9E9C58523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269C9C4F-06B5-4A8C-95B6-4D1FCBAFA85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269C9C4F-06B5-4A8C-95B6-4D1FCBAFA85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269C9C4F-06B5-4A8C-95B6-4D1FCBAFA85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269C9C4F-06B5-4A8C-95B6-4D1FCBAFA85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD2270B-A93E-4A29-BE73-A0B97AD3116A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD2270B-A93E-4A29-BE73-A0B97AD3116A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD2270B-A93E-4A29-BE73-A0B97AD3116A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD2270B-A93E-4A29-BE73-A0B97AD3116A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD42DDB6-7137-4514-9727-980B4D17B14C}
+	EndGlobalSection
+EndGlobal

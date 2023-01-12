@@ -1,0 +1,734 @@
+﻿[
+	{
+		"Codigo": "003",
+		"Nome": "BANCO DA AMAZONIA S.A."
+	},
+	{
+		"Codigo": "004",
+		"Nome": "BANCO DO NORDESTE DO BRASIL S.A."
+	},
+	{
+		"Codigo": "005",
+		"Nome": "PACIFIC INVEST DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS LTDA"
+	},
+	{
+		"Codigo": "006",
+		"Nome": "HAITONG BANCO DE INVESTIMENTO DO BRASIL S.A."
+	},
+	{
+		"Codigo": "006",
+		"Nome": "LEVYCAM - CORRETORA DE CAMBIO E VALORES LTDA."
+	},
+	{
+		"Codigo": "007",
+		"Nome": "BANCO NACIONAL DE DESENVOLVIMENTO ECONOMICO E SOCIAL"
+	},
+	{
+		"Codigo": "008",
+		"Nome": "AMARIL FRANKLIN CORRETORA DE TÍTULOS E VALORES LTDA"
+	},
+	{
+		"Codigo": "008",
+		"Nome": "BANCO SANTANDER (BRASIL) S.A."
+	},
+	{
+		"Codigo": "009",
+		"Nome": "LASTRO RDV DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA."
+	},
+	{
+		"Codigo": "017",
+		"Nome": "ADVANCED CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": "021",
+		"Nome": "BANESTES S.A. BANCO DO ESTADO DO ESPIRITO SANTO"
+	},
+	{
+		"Codigo": "023",
+		"Nome": "BANCO DE DESENVOLVIMENTO DE MINAS GERAIS S.A.-BDMG"
+	},
+	{
+		"Codigo": "029",
+		"Nome": "BANCO ITAÚ CONSIGNADO S.A."
+	},
+	{
+		"Codigo": "033",
+		"Nome": "BANCO WESTERN UNION DO BRASIL S.A."
+	},
+	{
+		"Codigo": "037",
+		"Nome": "BANCO DO ESTADO DO PARÁ S.A."
+	},
+	{
+		"Codigo": "038",
+		"Nome": "BR PARTNERS BANCO DE INVESTIMENTO S.A."
+	},
+	{
+		"Codigo": "041",
+		"Nome": "BANCO DO ESTADO DO RIO GRANDE DO SUL S.A."
+	},
+	{
+		"Codigo": "043",
+		"Nome": "PICPAY BANK - BANCO MÚLTIPLO S.A"
+	},
+	{
+		"Codigo": "047",
+		"Nome": "PATACÃO DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA."
+	},
+	{
+		"Codigo": "048",
+		"Nome": "BANCO ITAÚ BBA S.A."
+	},
+	{
+		"Codigo": "060",
+		"Nome": "AVS CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": "066",
+		"Nome": "BOA VIAGEM SOCIEDADE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": "070",
+		"Nome": "BRB - BANCO DE BRASILIA S.A."
+	},
+	{
+		"Codigo": "070",
+		"Nome": "COLUNA S/A DISTRIBUIDORA DE TITULOS E VALORES MOBILIÁRIOS"
+	},
+	{
+		"Codigo": "080",
+		"Nome": "EBADIVAL - E. BAGGIO DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LT"
+	},
+	{
+		"Codigo": "082",
+		"Nome": "BANCO HSBC S.A."
+	},
+	{
+		"Codigo": "087",
+		"Nome": "AMAZÔNIA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": "096",
+		"Nome": "DOURADA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": "097",
+		"Nome": "CORRETORA DE CAMBIO AÇORIANA LIMITADA."
+	},
+	{
+		"Codigo": 1,
+		"Nome": "BANCO DO BRASIL S.A."
+	},
+	{
+		"Codigo": 100,
+		"Nome": "DEBONI DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS LTDA"
+	},
+	{
+		"Codigo": 101,
+		"Nome": "ELITE CORRETORA DE CAMBIO E VALORES MOBILIÁRIOS LTDA"
+	},
+	{
+		"Codigo": 104,
+		"Nome": "CAIXA ECONOMICA FEDERAL"
+	},
+	{
+		"Codigo": 107,
+		"Nome": "BANCO BOCOM BBM S.A."
+	},
+	{
+		"Codigo": 111,
+		"Nome": "BANCO CREFISA S.A."
+	},
+	{
+		"Codigo": 115,
+		"Nome": "BANCO INBURSA S.A."
+	},
+	{
+		"Codigo": 120,
+		"Nome": "BANCO XCMG BRASIL S.A."
+	},
+	{
+		"Codigo": 122,
+		"Nome": "STONEX BANCO DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 122,
+		"Nome": "BANCO C6 S.A."
+	},
+	{
+		"Codigo": 123,
+		"Nome": "BANCO ALFA DE INVESTIMENTO S.A."
+	},
+	{
+		"Codigo": 126,
+		"Nome": "H H PICCHIONI S/A CORRETORA DE CAMBIO E VALORES MOBILIARIOS"
+	},
+	{
+		"Codigo": 136,
+		"Nome": "BANCO KDB DO BRASIL S.A."
+	},
+	{
+		"Codigo": 138,
+		"Nome": "BROKER BRASIL CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 143,
+		"Nome": "GET MONEY CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 160,
+		"Nome": "BANCO DA CHINA BRASIL S.A."
+	},
+	{
+		"Codigo": 161,
+		"Nome": "NEON CORRETORA DE TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 162,
+		"Nome": "BANCO DE INVESTIMENTOS CREDIT SUISSE (BRASIL) S.A."
+	},
+	{
+		"Codigo": 198,
+		"Nome": "ONNIX CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 203,
+		"Nome": "CONFIDENCE CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 208,
+		"Nome": "BANCO BTG PACTUAL S.A."
+	},
+	{
+		"Codigo": 212,
+		"Nome": "BANCO ORIGINAL S.A."
+	},
+	{
+		"Codigo": 213,
+		"Nome": "BANCO ARBI S.A."
+	},
+	{
+		"Codigo": 214,
+		"Nome": "MONEYCORP BANCO DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 218,
+		"Nome": "BANCO ANDBANK (BRASIL) S.A."
+	},
+	{
+		"Codigo": 218,
+		"Nome": "BANCO BS2 S.A."
+	},
+	{
+		"Codigo": 220,
+		"Nome": "SLW CORRETORA DE VALORES E CAMBIO LTDA."
+	},
+	{
+		"Codigo": 222,
+		"Nome": "BANCO CRÉDIT AGRICOLE BRASIL S.A."
+	},
+	{
+		"Codigo": 224,
+		"Nome": "BANCO FIBRA S.A."
+	},
+	{
+		"Codigo": 225,
+		"Nome": "BRKB DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 229,
+		"Nome": "MASTER S/A CORRETORA DE CAMBIO, TÍTULOS E VALORES MOBILIÁRIOS"
+	},
+	{
+		"Codigo": 237,
+		"Nome": "BANCO BRADESCO S.A."
+	},
+	{
+		"Codigo": 243,
+		"Nome": "BANCO MASTER S/A"
+	},
+	{
+		"Codigo": 246,
+		"Nome": "BANCO ABC BRASIL S.A."
+	},
+	{
+		"Codigo": 250,
+		"Nome": "BCV - BANCO DE CRÉDITO E VAREJO S.A."
+	},
+	{
+		"Codigo": 254,
+		"Nome": "PARANÁ BANCO S.A."
+	},
+	{
+		"Codigo": 260,
+		"Nome": "ICBC DO BRASIL BANCO MÚLTIPLO S.A."
+	},
+	{
+		"Codigo": 268,
+		"Nome": "INTERCAM CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 287,
+		"Nome": "FAIR CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 290,
+		"Nome": "GOLDMAN SACHS DO BRASIL BANCO MULTIPLO S.A."
+	},
+	{
+		"Codigo": 300,
+		"Nome": "BANCO DE LA NACION ARGENTINA"
+	},
+	{
+		"Codigo": 301,
+		"Nome": "SADOC SOCIEDADE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 313,
+		"Nome": "BANCO ABN AMRO S.A."
+	},
+	{
+		"Codigo": 314,
+		"Nome": "EXECUTIVE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 318,
+		"Nome": "BANCO BMG S.A."
+	},
+	{
+		"Codigo": 320,
+		"Nome": "CHINA CONSTRUCTION BANK (BRASIL) BANCO MÚLTIPLO S/A"
+	},
+	{
+		"Codigo": 341,
+		"Nome": "ITAÚ UNIBANCO S.A."
+	},
+	{
+		"Codigo": 344,
+		"Nome": "WISE BRASIL CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 353,
+		"Nome": "BEXS CORRETORA DE CAMBIO S/A"
+	},
+	{
+		"Codigo": 361,
+		"Nome": "CORREPARTI CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 362,
+		"Nome": "ARC CORRETORA DE CAMBIO, ASSOCIADOS GOUVEIA, CAMPEDELLI S.A."
+	},
+	{
+		"Codigo": 363,
+		"Nome": "SINGULARE CORRETORA DE TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 366,
+		"Nome": "BANCO SOCIETE GENERALE BRASIL S.A."
+	},
+	{
+		"Codigo": 370,
+		"Nome": "BANCO MIZUHO DO BRASIL S.A."
+	},
+	{
+		"Codigo": 376,
+		"Nome": "BANCO J.P. MORGAN S.A."
+	},
+	{
+		"Codigo": 389,
+		"Nome": "BANCO MERCANTIL DO BRASIL S.A."
+	},
+	{
+		"Codigo": 389,
+		"Nome": "CONECTA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 392,
+		"Nome": "SINGRATUR CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 396,
+		"Nome": "FOURTRADE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 399,
+		"Nome": "KIRTON BANK S.A. - BANCO MÚLTIPLO"
+	},
+	{
+		"Codigo": 399,
+		"Nome": "CAMBIONET CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 407,
+		"Nome": "OZ CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 417,
+		"Nome": "BANCO TOPÁZIO S.A."
+	},
+	{
+		"Codigo": 419,
+		"Nome": "INTESA SANPAOLO BRASIL S.A. - BANCO MÚLTIPLO"
+	},
+	{
+		"Codigo": 420,
+		"Nome": "STONEX DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA."
+	},
+	{
+		"Codigo": 422,
+		"Nome": "BANCO SAFRA S.A."
+	},
+	{
+		"Codigo": 423,
+		"Nome": "BRX CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 423,
+		"Nome": "EFX CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 424,
+		"Nome": "BANCO XP S.A."
+	},
+	{
+		"Codigo": 428,
+		"Nome": "CONSEGTUR CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 429,
+		"Nome": "BANCO INTER S.A."
+	},
+	{
+		"Codigo": 434,
+		"Nome": "EXIM CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 440,
+		"Nome": "B&T CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 442,
+		"Nome": "HIPERCARD BANCO MÚLTIPLO S.A."
+	},
+	{
+		"Codigo": 446,
+		"Nome": "AGK CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 456,
+		"Nome": "BANCO MUFG BRASIL S.A."
+	},
+	{
+		"Codigo": 458,
+		"Nome": "BANCO CARGILL S.A."
+	},
+	{
+		"Codigo": 464,
+		"Nome": "BANCO SUMITOMO MITSUI BRASILEIRO S.A."
+	},
+	{
+		"Codigo": 466,
+		"Nome": "PLANNER CORRETORA DE VALORES S.A."
+	},
+	{
+		"Codigo": 473,
+		"Nome": "BANCO CAIXA GERAL - BRASIL S.A."
+	},
+	{
+		"Codigo": 477,
+		"Nome": "CITIBANK N.A."
+	},
+	{
+		"Codigo": 479,
+		"Nome": "BANCO ITAUBANK S.A."
+	},
+	{
+		"Codigo": 487,
+		"Nome": "DEUTSCHE BANK S.A. - BANCO ALEMAO"
+	},
+	{
+		"Codigo": 488,
+		"Nome": "JPMORGAN CHASE BANK, NATIONAL ASSOCIATION"
+	},
+	{
+		"Codigo": 492,
+		"Nome": "ING BANK N.V."
+	},
+	{
+		"Codigo": 493,
+		"Nome": "TREVISO CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 495,
+		"Nome": "BANCO DE LA PROVINCIA DE BUENOS AIRES"
+	},
+	{
+		"Codigo": 523,
+		"Nome": "GUITTA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 564,
+		"Nome": "DIBRAN DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA."
+	},
+	{
+		"Codigo": 577,
+		"Nome": "GENIAL INSTITUCIONAL CORRETORA DE CAMBIO, TÍTULOS E VALORES MOBILIÁRIO"
+	},
+	{
+		"Codigo": 578,
+		"Nome": "BANCO J. SAFRA S.A."
+	},
+	{
+		"Codigo": 595,
+		"Nome": "DILLON S/A DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS"
+	},
+	{
+		"Codigo": 596,
+		"Nome": "COMMERZBANK BRASIL S.A. - BANCO MÚLTIPLO"
+	},
+	{
+		"Codigo": 600,
+		"Nome": "BANCO LUSO BRASILEIRO S.A."
+	},
+	{
+		"Codigo": 604,
+		"Nome": "BANCO INDUSTRIAL DO BRASIL S.A."
+	},
+	{
+		"Codigo": 611,
+		"Nome": "BANCO PAULISTA S.A."
+	},
+	{
+		"Codigo": 623,
+		"Nome": "BANCO PAN S.A."
+	},
+	{
+		"Codigo": 630,
+		"Nome": "BANCO LETSBANK S.A."
+	},
+	{
+		"Codigo": 632,
+		"Nome": "MIRAE ASSET WEALTH MANAGEMENT (BRAZIL) CORRETORA DE CAMBIO, TÍTULOS E"
+	},
+	{
+		"Codigo": 633,
+		"Nome": "BANCO RENDIMENTO S.A."
+	},
+	{
+		"Codigo": 634,
+		"Nome": "LÚMINA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 637,
+		"Nome": "PARMETAL DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA"
+	},
+	{
+		"Codigo": 637,
+		"Nome": "BANCO SOFISA S.A."
+	},
+	{
+		"Codigo": 643,
+		"Nome": "BANCO PINE S.A."
+	},
+	{
+		"Codigo": 653,
+		"Nome": "BANCO VOITER S.A."
+	},
+	{
+		"Codigo": 655,
+		"Nome": "SOL CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 655,
+		"Nome": "BANCO VOTORANTIM S.A."
+	},
+	{
+		"Codigo": 673,
+		"Nome": "CONEXION CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 686,
+		"Nome": "UBS BRASIL BANCO DE INVESTIMENTO S.A."
+	},
+	{
+		"Codigo": 695,
+		"Nome": "CODEPE CORRETORA DE VALORES E CAMBIO S.A."
+	},
+	{
+		"Codigo": 698,
+		"Nome": "GUIDE INVESTIMENTOS S.A. CORRETORA DE VALORES"
+	},
+	{
+		"Codigo": 700,
+		"Nome": "INVEST CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 707,
+		"Nome": "BANCO DAYCOVAL S.A."
+	},
+	{
+		"Codigo": 710,
+		"Nome": "BANCO GENIAL S.A."
+	},
+	{
+		"Codigo": 712,
+		"Nome": "BANCO OURINVEST S.A."
+	},
+	{
+		"Codigo": 731,
+		"Nome": "GOOD CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 735,
+		"Nome": "VIP'S CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 739,
+		"Nome": "BANCO CETELEM S.A."
+	},
+	{
+		"Codigo": 743,
+		"Nome": "BANCO SEMEAR S.A."
+	},
+	{
+		"Codigo": 745,
+		"Nome": "BANCO CITIBANK S.A."
+	},
+	{
+		"Codigo": 746,
+		"Nome": "BANCO MODAL S.A."
+	},
+	{
+		"Codigo": 747,
+		"Nome": "BANCO RABOBANK INTERNATIONAL BRASIL S.A."
+	},
+	{
+		"Codigo": 748,
+		"Nome": "BANCO COOPERATIVO SICREDI S.A."
+	},
+	{
+		"Codigo": 751,
+		"Nome": "SCOTIABANK BRASIL S.A. BANCO MÚLTIPLO"
+	},
+	{
+		"Codigo": 752,
+		"Nome": "BANCO BNP PARIBAS BRASIL S.A."
+	},
+	{
+		"Codigo": 753,
+		"Nome": "NOVO BANCO CONTINENTAL S.A. - BANCO MÚLTIPLO"
+	},
+	{
+		"Codigo": 755,
+		"Nome": "STATE STREET BRASIL S.A. - BANCO COMERCIAL"
+	},
+	{
+		"Codigo": 755,
+		"Nome": "BANK OF AMERICA MERRILL LYNCH BANCO MÚLTIPLO S.A."
+	},
+	{
+		"Codigo": 756,
+		"Nome": "BANCO COOPERATIVO SICOOB S.A. - BANCO SICOOB"
+	},
+	{
+		"Codigo": 757,
+		"Nome": "BANCO KEB HANA DO BRASIL S.A."
+	},
+	{
+		"Codigo": 775,
+		"Nome": "COTACAO DISTRIBUIDORA DE TITULOS E VALORES MOBILIARIOS S.A"
+	},
+	{
+		"Codigo": 781,
+		"Nome": "MEGA CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 783,
+		"Nome": "SAGITUR CORRETORA DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 791,
+		"Nome": "IB CORRETORA DE CAMBIO, TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 796,
+		"Nome": "LABOR SOCIEDADE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 814,
+		"Nome": "TURMA CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 824,
+		"Nome": "FRENTE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 844,
+		"Nome": "XP INVESTIMENTOS CORRETORA DE CAMBIO,TÍTULOS E VALORES MOBILIÁRIOS S/A"
+	},
+	{
+		"Codigo": 854,
+		"Nome": "BANCO WOORI BANK DO BRASIL S.A."
+	},
+	{
+		"Codigo": 857,
+		"Nome": "TRAVELEX BANCO DE CAMBIO S.A."
+	},
+	{
+		"Codigo": 860,
+		"Nome": "BANCO MORGAN STANLEY S.A."
+	},
+	{
+		"Codigo": 866,
+		"Nome": "BEXS BANCO DE CAMBIO S/A"
+	},
+	{
+		"Codigo": 877,
+		"Nome": "GLOBAL EXCHANGE DO BRASIL SOCIEDADE CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 916,
+		"Nome": "NUMATUR CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 930,
+		"Nome": "OM DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS LTDA"
+	},
+	{
+		"Codigo": 932,
+		"Nome": "AVIPAM CORRETORA DE CAMBIO LTDA"
+	},
+	{
+		"Codigo": 953,
+		"Nome": "BS2 DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 955,
+		"Nome": "MONOPÓLIO CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 961,
+		"Nome": "MS BANK S.A. BANCO DE CAMBIO"
+	},
+	{
+		"Codigo": 964,
+		"Nome": "PROSEFTUR CORRETORA DE CAMBIO S.A"
+	},
+	{
+		"Codigo": 972,
+		"Nome": "BANCO B3 S.A."
+	},
+	{
+		"Codigo": 978,
+		"Nome": "FRAM CAPITAL DISTRIBUIDORA DE TÍTULOS E VALORES MOBILIÁRIOS S.A."
+	},
+	{
+		"Codigo": 991,
+		"Nome": "TURCAMBIO - CORRETORA DE CAMBIO LTDA."
+	},
+	{
+		"Codigo": 996,
+		"Nome": "WESTERN UNION CORRETORA DE CAMBIO S.A."
+	}
+]

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Kontatus.Service</AssemblyName>
+    <RootNamespace>Kontatus.Service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kontatus.Data\Kontatus.Data.csproj" />
+    <ProjectReference Include="..\Kontatus.Domain\Kontatus.Domain.csproj" />
+    <ProjectReference Include="..\Kontatus.Helper\Kontatus.Helper.csproj" />
+  </ItemGroup>
+
+</Project>
