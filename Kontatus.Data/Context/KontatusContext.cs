@@ -7,6 +7,8 @@ namespace ConsigIntegra.Data.Context
     {
         public KontatusContext(DbContextOptions<KontatusContext> options) : base(options) { }
 
+
+
         public DbSet<Perfil> Perfis { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Login> Logins { get; set; }
