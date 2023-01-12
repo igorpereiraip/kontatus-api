@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace ConsigIntegra.Domain.DTO
+namespace Kontatus.Domain.DTO
 {
     public class ResultadoOfflineDTO
     {

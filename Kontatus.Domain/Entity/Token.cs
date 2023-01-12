@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     [Table("Token")]
     public class Token : Base

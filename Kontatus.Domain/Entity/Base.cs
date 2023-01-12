@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     public class Base
     {

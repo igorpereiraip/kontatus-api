@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
-namespace ConsigIntegra.Domain.DTO
+namespace Kontatus.Domain.DTO
 {
     public class ArquivoDTO
     {

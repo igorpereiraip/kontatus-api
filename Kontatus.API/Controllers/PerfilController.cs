@@ -1,8 +1,8 @@
-﻿using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Service;
-using GED.API.Controllers;
+﻿using Kontatus.Domain.Entity;
+using Kontatus.Service;
+using Kontatus.API.Controllers;
 
-namespace ConsigIntegra.API.Controllers
+namespace Kontatus.API.Controllers
 {
     public class PerfilController : Controller<Perfil>
     {

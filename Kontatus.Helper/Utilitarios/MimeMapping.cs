@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public static class MimeMapping
     {

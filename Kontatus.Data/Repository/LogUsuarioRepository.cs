@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using System;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Data.Context;
+using Kontatus.Domain.Entity;
+using Kontatus.Data.Context;
 
-namespace ConsigIntegra.Data.Repository
+namespace Kontatus.Data.Repository
 {
     public interface ILogUsuarioRepository
     {
@@ -17,9 +17,9 @@ namespace ConsigIntegra.Data.Repository
     }
     public class LogUsuarioRepository : ILogUsuarioRepository
     {
-        protected readonly ConsigIntegraContext context;
+        protected readonly KontatusContext context;
 
-        public LogUsuarioRepository(ConsigIntegraContext context)
+        public LogUsuarioRepository(KontatusContext context)
         {
             this.context = context;
         }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public enum ErrorType
     {

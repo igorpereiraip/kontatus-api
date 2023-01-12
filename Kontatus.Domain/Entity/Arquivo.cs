@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text.Json.Serialization;
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     [Table("Arquivo")]
     public class Arquivo : Base

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Domain.ViewModels
+namespace Kontatus.Domain.ViewModels
 {
     public class LogUsuarioViewModel : BaseViewModel
     {

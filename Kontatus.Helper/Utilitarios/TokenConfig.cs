@@ -1,8 +1,8 @@
-﻿using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Domain.Entity;
 using System;
 using System.Collections.Generic;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public class TokenConfig
     {

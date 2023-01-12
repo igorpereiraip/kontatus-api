@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using ConsigIntegra.Data.Repository;
+using Kontatus.Data.Repository;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface ISolicitacaoOfflineService
     {

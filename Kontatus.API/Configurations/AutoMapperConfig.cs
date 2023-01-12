@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Domain.ViewModels;
-using ConsigIntegra.Helper.Utilitarios;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
+using Kontatus.Domain.ViewModels;
+using Kontatus.Helper.Utilitarios;
 
-namespace ConsigIntegra.API.Configurations
+namespace Kontatus.API.Configurations
 {
     public class AutoMapperConfig : Profile
     {

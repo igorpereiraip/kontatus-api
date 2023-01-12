@@ -1,6 +1,6 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Service;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Service;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using System;   
@@ -8,7 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IArquivoService
     {

@@ -1,7 +1,7 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.Entity;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IPerfilService : IService<Perfil>
     {

@@ -1,6 +1,6 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Service;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Service;
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Http;
@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace ConsigIntegra.API.Configurations
+namespace Kontatus.API.Configurations
 {
     public static class DIConfig
     {

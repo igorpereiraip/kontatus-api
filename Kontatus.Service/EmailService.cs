@@ -1,5 +1,5 @@
-﻿using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Helper.Utilitarios;
+﻿using Kontatus.Domain.DTO;
+using Kontatus.Helper.Utilitarios;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IEmailService
     {
@@ -43,7 +43,7 @@ namespace ConsigIntegra.Service
                 body = body.Replace("{{email}}", email);
                 body = body.Replace("{{senha}}", senha);
 
-                await _emailSender.SendEmailAsync("ConsigIntegra - DADOS DE ACESSO", body, new[] { email });
+                await _emailSender.SendEmailAsync("Kontatus - DADOS DE ACESSO", body, new[] { email });
                 var logUsuario = new LogUsuarioDTO();
                 logUsuario.Ativo = true;
                 logUsuario.Controle = "E-mail novo Usuário";

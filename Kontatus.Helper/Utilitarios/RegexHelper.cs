@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public static class RegexHelper
     {

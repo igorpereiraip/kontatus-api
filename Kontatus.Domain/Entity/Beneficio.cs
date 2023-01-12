@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     public class Beneficio
     {

@@ -1,9 +1,9 @@
-﻿using ConsigIntegra.Data.Context;
+﻿using Kontatus.Data.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConsigIntegra.API.Configurations
+namespace Kontatus.API.Configurations
 {
     public static class ContextConfig
     {
@@ -11,7 +11,7 @@ namespace ConsigIntegra.API.Configurations
         {
             using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
            .CreateScope();
-            serviceScope.ServiceProvider.GetService<ConsigIntegraContext>().Database.Migrate();
+            serviceScope.ServiceProvider.GetService<KontatusContext>().Database.Migrate();
         }
 
     }

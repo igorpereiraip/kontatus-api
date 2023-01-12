@@ -1,4 +1,4 @@
-﻿namespace ConsigIntegra.Domain.DTO
+﻿namespace Kontatus.Domain.DTO
 {
     public class LogUsuarioDTO
     {

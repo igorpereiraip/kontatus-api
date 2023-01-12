@@ -1,5 +1,5 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IService<T> where T : Base
     {

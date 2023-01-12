@@ -1,17 +1,17 @@
-﻿using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Domain.Entity;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     [Table("Login")]
     public class Login : Base
     {
         public Login()
         {
-            TipoLoginID = TipoLogin.ConsigIntegra;
+            TipoLoginID = TipoLogin.Kontatus;
             Principal = true;
         }
 
@@ -40,5 +40,5 @@ namespace ConsigIntegra.Domain.Entity
         
     }
 
-    public enum TipoLogin { ConsigIntegra = 1, Google = 2, Facebook = 3 }
+    public enum TipoLogin { Kontatus = 1, Google = 2, Facebook = 3 }
 }

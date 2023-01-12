@@ -3,7 +3,7 @@ using DinkToPdf.Contracts;
 using Microsoft.Azure.WebJobs;
 using Newtonsoft.Json;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public static class Conversor
     {

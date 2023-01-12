@@ -5,13 +5,13 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Domain.ViewModels
+namespace Kontatus.Domain.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
         public LoginViewModel()
         {
-            TipoLoginID = TipoLoginViewModel.ConsigIntegra;
+            TipoLoginID = TipoLoginViewModel.Kontatus;
             Principal = true;
         }
 
@@ -35,5 +35,5 @@ namespace ConsigIntegra.Domain.ViewModels
 
     }
 
-    public enum TipoLoginViewModel { ConsigIntegra = 1, Google = 2, Facebook = 3 }
+    public enum TipoLoginViewModel { Kontatus = 1, Google = 2, Facebook = 3 }
 }

@@ -1,12 +1,12 @@
-﻿using ConsigIntegra.Data.Context;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Context;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Data.Repository
+namespace Kontatus.Data.Repository
 {
     public interface IDadosIN100Repository : IRepository<DadosIN100>
     {
@@ -14,7 +14,7 @@ namespace ConsigIntegra.Data.Repository
     }
     public class DadosIN100Repository : Repository<DadosIN100>, IDadosIN100Repository
     {
-        public DadosIN100Repository(ConsigIntegraContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
+        public DadosIN100Repository(KontatusContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
         {
         }
 

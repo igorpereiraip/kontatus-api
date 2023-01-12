@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsigIntegra.Domain.ViewModels
+namespace Kontatus.Domain.ViewModels
 {
     public class TokenConfigViewModel
     {

@@ -2,7 +2,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public static class Http
     {

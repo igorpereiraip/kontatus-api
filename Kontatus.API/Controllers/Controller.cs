@@ -1,6 +1,6 @@
-﻿using ConsigIntegra.API.Configurations;
-using ConsigIntegra.Helper.Utilitarios;
-using ConsigIntegra.Service;
+﻿using Kontatus.API.Configurations;
+using Kontatus.Helper.Utilitarios;
+using Kontatus.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace GED.API.Controllers
+namespace Kontatus.API.Controllers
 {
-  interface IController<T> where T : ConsigIntegra.Domain.Entity.Base, new()
+  interface IController<T> where T : Kontatus.Domain.Entity.Base, new()
   {
     Task<Result<IEnumerable<T>>> List(bool? basico);
     Task<Result<T>> Get(int id);
@@ -22,7 +22,7 @@ namespace GED.API.Controllers
 
   [Route("api/[controller]")]
     [ApiController]
-  public abstract class Controller<T> : ControllerBase, IController<T> where T : ConsigIntegra.Domain.Entity.Base, new()
+  public abstract class Controller<T> : ControllerBase, IController<T> where T : Kontatus.Domain.Entity.Base, new()
   {
     protected readonly IService<T> service;
 

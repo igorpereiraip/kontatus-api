@@ -1,6 +1,6 @@
-﻿using ConsigIntegra.Data.Context;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Context;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Data.Repository
+namespace Kontatus.Data.Repository
 {
     public interface IRepository<T> where T : Base, new()
     {
@@ -28,11 +28,11 @@ namespace ConsigIntegra.Data.Repository
 
     public class Repository<T> : IRepository<T> where T : Base, new()
     {
-        protected readonly ConsigIntegraContext context;
+        protected readonly KontatusContext context;
         protected readonly LogUsuarioDTO _logUsuarioDTO;
         protected string[] incluir;
 
-        public Repository(ConsigIntegraContext context, LogUsuarioDTO logUsuarioDTO)
+        public Repository(KontatusContext context, LogUsuarioDTO logUsuarioDTO)
         {
             this.context = context;
             _logUsuarioDTO = logUsuarioDTO;

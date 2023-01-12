@@ -1,9 +1,9 @@
 ﻿
-using ConsigIntegra.Domain.Enums;
+using Kontatus.Domain.Enums;
 using System;
 using System.Collections.Generic;
 
-namespace ConsigIntegra.Domain.DTO
+namespace Kontatus.Domain.DTO
 {
     public class UsuarioDTO
     {

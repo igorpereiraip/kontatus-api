@@ -1,5 +1,5 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Helper.Utilitarios;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Helper.Utilitarios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.API.Configurations
+namespace Kontatus.API.Configurations
 {
     public class ClaimRequirementAttribute : TypeFilterAttribute
     {

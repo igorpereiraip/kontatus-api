@@ -1,10 +1,10 @@
 ﻿
 using AutoMapper;
-using ConsigIntegra.API.Configurations;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Helper.Utilitarios;
-using ConsigIntegra.Service;
+using Kontatus.API.Configurations;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
+using Kontatus.Helper.Utilitarios;
+using Kontatus.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +17,7 @@ using System.Security.Claims;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.API.Controllers
+namespace Kontatus.API.Controllers
 {
     [Route("api/[controller]")]
     [ClaimRequirement(ClaimTypes.Name, "Authorization")]

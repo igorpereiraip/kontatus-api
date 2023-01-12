@@ -1,7 +1,7 @@
 using AutoMapper;
-using ConsigIntegra.API.Configurations;
-using ConsigIntegra.Data.Context;
-using ConsigIntegra.Helper.Utilitarios;
+using Kontatus.API.Configurations;
+using Kontatus.Data.Context;
+using Kontatus.Helper.Utilitarios;
 using GED.API.Configurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,11 +14,11 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Globalization;
 
-namespace ConsigIntegra.API
+namespace Kontatus.API
 {
     public class Startup
     {
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        //readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,10 +28,10 @@ namespace ConsigIntegra.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ConsigIntegraContext>(options =>
+            services.AddDbContext<KontatusContext>(options =>
             {
                 options.EnableSensitiveDataLogging();
-                options.UseSqlServer(Configuration.GetConnectionString("ConsigIntegraDB"), b => { b.MigrationsAssembly("ConsigIntegra.Data"); b.CommandTimeout(600); });
+                options.UseSqlServer(Configuration.GetConnectionString("KontatusDB"), b => { b.MigrationsAssembly("Kontatus.Data"); b.CommandTimeout(600); });
             });
 
             services.ResolveDependencies(Configuration);
@@ -55,7 +55,7 @@ namespace ConsigIntegra.API
 
             //services.AddSwaggerGen(c =>
             //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ConsigIntegra.API", Version = "v1" });
+            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Kontatus.API", Version = "v1" });
             //});
 
             var mapperConfig = new MapperConfiguration(mc =>
@@ -91,7 +91,7 @@ namespace ConsigIntegra.API
             app.UseSwaggerUI(c =>
             {
                 c.RoutePrefix = "api/docs";
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConsigIntegra API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Kontatus API V1");
                 c.DefaultModelExpandDepth(-1);
                 c.DefaultModelsExpandDepth(-1);
             });

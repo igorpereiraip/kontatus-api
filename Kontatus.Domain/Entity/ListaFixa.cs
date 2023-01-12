@@ -1,5 +1,5 @@
 ﻿
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     public class ListaFixa
     {

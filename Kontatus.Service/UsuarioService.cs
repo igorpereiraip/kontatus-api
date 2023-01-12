@@ -1,11 +1,11 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IUsuarioService : IService<Usuario>
     {

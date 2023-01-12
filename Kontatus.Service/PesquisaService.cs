@@ -1,8 +1,8 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Domain.Enums;
-using ConsigIntegra.Helper.Utilitarios;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
+using Kontatus.Domain.Enums;
+using Kontatus.Helper.Utilitarios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -15,7 +15,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface IPesquisaService
     {

@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Text;
 
-namespace ConsigIntegra.API.Configurations
+namespace Kontatus.API.Configurations
 {
     public static class AuthConfig
     {

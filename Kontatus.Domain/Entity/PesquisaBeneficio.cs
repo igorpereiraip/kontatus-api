@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
     public class PesquisaBeneficio
     {

@@ -5,11 +5,11 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
-using ConsigIntegra.Helper.Utilitarios;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Data.Repository;
+using Kontatus.Helper.Utilitarios;
+using Kontatus.Domain.Entity;
+using Kontatus.Data.Repository;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public class LoginDomainService
     {

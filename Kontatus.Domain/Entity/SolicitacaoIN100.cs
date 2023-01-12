@@ -1,6 +1,6 @@
-﻿using ConsigIntegra.Domain.Enums;
+﻿using Kontatus.Domain.Enums;
 
-namespace ConsigIntegra.Domain.Entity
+namespace Kontatus.Domain.Entity
 {
 
     public class SolicitacaoIN100 : Base

@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
-using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
+using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface ILogUsuarioService
     {

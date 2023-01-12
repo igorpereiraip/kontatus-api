@@ -1,7 +1,7 @@
-﻿using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsigIntegra.Data.Context
+namespace Kontatus.Data.Context
 {
     public class KontatusContext : DbContext
     {

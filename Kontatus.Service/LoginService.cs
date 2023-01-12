@@ -1,9 +1,9 @@
-﻿using ConsigIntegra.Data.Repository;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Helper.Utilitarios;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.Entity;
+using Kontatus.Helper.Utilitarios;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Service
+namespace Kontatus.Service
 {
     public interface ILoginService : IService<Login>
     {

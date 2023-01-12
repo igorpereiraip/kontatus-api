@@ -1,15 +1,15 @@
-﻿using ConsigIntegra.Data.Context;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
+﻿using Kontatus.Data.Context;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 
-namespace ConsigIntegra.Data.Repository
+namespace Kontatus.Data.Repository
 {
     public interface ISolicitacaoOfflineRepository : IRepository<SolicitacaoOffline>
     {
     }
     public class SolicitacaoOfflineRepository : Repository<SolicitacaoOffline>, ISolicitacaoOfflineRepository
     {
-        public SolicitacaoOfflineRepository(ConsigIntegraContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
+        public SolicitacaoOfflineRepository(KontatusContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
         {
         }
 

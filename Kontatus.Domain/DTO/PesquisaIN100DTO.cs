@@ -1,8 +1,8 @@
 ﻿
-using ConsigIntegra.Domain.Entity;
+using Kontatus.Domain.Entity;
 
 
-namespace ConsigIntegra.Domain.DTO
+namespace Kontatus.Domain.DTO
 {
     public class PesquisaIN100DTO
     {

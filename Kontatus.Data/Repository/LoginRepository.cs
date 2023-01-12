@@ -1,13 +1,13 @@
-﻿using ConsigIntegra.Data.Context;
-using ConsigIntegra.Domain.DTO;
-using ConsigIntegra.Domain.Entity;
-using ConsigIntegra.Helper.Utilitarios;
+﻿using Kontatus.Data.Context;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
+using Kontatus.Helper.Utilitarios;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConsigIntegra.Data.Repository
+namespace Kontatus.Data.Repository
 {
     public interface ILoginRepository : IRepository<Login>
     {
@@ -16,7 +16,7 @@ namespace ConsigIntegra.Data.Repository
     }
     public class LoginRepository : Repository<Login>, ILoginRepository
     {
-        public LoginRepository(ConsigIntegraContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
+        public LoginRepository(KontatusContext context, LogUsuarioDTO logUsuarioDTO) : base(context, logUsuarioDTO)
         {
 
         }

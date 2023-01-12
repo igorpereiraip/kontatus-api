@@ -1,4 +1,4 @@
-﻿namespace ConsigIntegra.Domain.Enums
+﻿namespace Kontatus.Domain.Enums
 {
     public enum ETipoUsuario
     {

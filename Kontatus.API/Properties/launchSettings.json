@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ConsigIntegra.API": {
+    "Kontatus.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/docs",

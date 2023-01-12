@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsigIntegra.Helper.Utilitarios
+namespace Kontatus.Helper.Utilitarios
 {
     public static class TimezoneConfig
     {
