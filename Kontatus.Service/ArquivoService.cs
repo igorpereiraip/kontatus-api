@@ -1,7 +1,9 @@
 ﻿using Kontatus.Data.Repository;
 using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using Kontatus.Service;
 using Microsoft.Azure.Storage.Blob;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;   
 using System.IO;
@@ -14,6 +16,7 @@ namespace Kontatus.Service
     {
         Task SalvarArquivo(ArquivoDTO arquivoDTO);
         Task<(byte[], string)> GetArquivo(int usuarioID, string beneficio);
+        Task<bool> ImportarXLS(Pessoa pessoa, Telefone telefone);
     }
 
     public class ArquivoService : IArquivoService
@@ -21,16 +24,48 @@ namespace Kontatus.Service
         private readonly IArquivoRepository repository;
         private readonly IBlobStorageService blobStorageService;
         private readonly IConfiguration configuration;
+        private readonly IPessoaRepository pessoaRepository;
+        private readonly ITelefoneRepository telefoneRepository;
 
         public ArquivoService(IArquivoRepository repository, 
             IBlobStorageService blobStorageService, 
-            IConfiguration configuration
+            IConfiguration configuration,
+            IPessoaRepository pessoaRepository,
+            ITelefoneRepository telefoneRepository
             )
             : base()
         {
             this.repository = repository;
             this.blobStorageService = blobStorageService;
             this.configuration = configuration;
+            this.pessoaRepository = pessoaRepository;
+            this.telefoneRepository = telefoneRepository;
+
+        }
+
+        public async Task<bool> ImportarXLS(Pessoa pessoa, Telefone telefone)
+        {
+            var listPessoa = await pessoaRepository.Find(x => x.CPF == pessoa.CPF).ToListAsync();
+
+            if (listPessoa.Count > 0)
+            {
+                var telefoneExistente = await telefoneRepository.Find(x => x.NumeroTelefone == telefone.NumeroTelefone && x.PessoaId == listPessoa[0].ID).FirstOrDefaultAsync();
+                if (telefoneExistente == null)
+                {
+                    telefone.PessoaId = listPessoa[0].ID;
+                    var telefoneNovo = await telefoneRepository.Create(telefone);
+                }
+
+            }
+            else
+            {
+                var pessoaNova = await pessoaRepository.Create(pessoa);
+                telefone.PessoaId = pessoaNova.ID;
+                var telefoneNovo = await telefoneRepository.Create(telefone);
+            }
+
+            return true;
+
         }
 
         public async Task SalvarArquivo(ArquivoDTO arquivoDTO)
@@ -50,18 +85,19 @@ namespace Kontatus.Service
 
                 var tamanhoMb = Math.Round(blob.Properties.Length / 1048576.0, 2);
 
-                if (!string.IsNullOrEmpty(blob.SnapshotQualifiedStorageUri.PrimaryUri.AbsoluteUri))
-                {
-                    await repository.SalvarArquivo(
-                        arquivoDTO.Beneficio,
-                        arquivoDTO.Mes,
-                        DateTime.Now.Year.ToString(),
-                        DateTime.UtcNow.Day.ToString("d2"),
-                        arquivoDTO.UsuarioID,
-                        blob.SnapshotQualifiedStorageUri.PrimaryUri.AbsoluteUri,
-                        nome,
-                        tamanhoMb);
-                }
+                //if (!string.IsNullOrEmpty(blob.SnapshotQualifiedStorageUri.PrimaryUri.AbsoluteUri))
+                //{
+                //    await repository.SalvarArquivo(
+                //        arquivoDTO.
+                //        Beneficio,
+                //        arquivoDTO.Mes,
+                //        DateTime.Now.Year.ToString(),
+                //        DateTime.UtcNow.Day.ToString("d2"),
+                //        arquivoDTO.UsuarioID,
+                //        blob.SnapshotQualifiedStorageUri.PrimaryUri.AbsoluteUri,
+                //        nome,
+                //        tamanhoMb);
+                //}
             }
         }
 

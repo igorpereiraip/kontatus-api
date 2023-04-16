@@ -4,14 +4,16 @@ using Kontatus.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kontatus.Data.Migrations
 {
     [DbContext(typeof(KontatusContext))]
-    partial class KontatusContextModelSnapshot : ModelSnapshot
+    [Migration("20230206225925_modelagem dados first")]
+    partial class modelagemdadosfirst
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +69,7 @@ namespace Kontatus.Data.Migrations
                     b.ToTable("Arquivo");
                 });
 
-            modelBuilder.Entity("Kontatus.Domain.Entity.ArquivoImportado", b =>
+            modelBuilder.Entity("Kontatus.Domain.Entity.DadosIN100", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -77,44 +79,114 @@ namespace Kontatus.Data.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Competencia")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                    b.Property<string>("Banco")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("BeneficiarioID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Beneficio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("BeneficioID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cpf")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DDB")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DIB")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("DataAtualizacao")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Descricao")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                    b.Property<string>("DataNascimento")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("EnderecosAlterados")
+                    b.Property<string>("EmprestimoBloqueado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmprestimoElegivel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Idade")
                         .HasColumnType("int");
 
-                    b.Property<int?>("EnderecosCriados")
+                    b.Property<int?>("InstituicaoFinanceiraID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PessoasAdicionadas")
+                    b.Property<string>("MargemConsignavel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MargemConsignavelCartao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("MargemNula")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MeioPagamento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MeioPagamentoID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PessoasAlteradas")
+                    b.Property<string>("MensagemServidor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NomeAgencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroAgencia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroBeneficio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroContaCorrente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OrigemBancoID")
                         .HasColumnType("int");
 
-                    b.Property<int>("StatusProcessamento")
+                    b.Property<string>("PossuiProcurador")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PossuiRepresentanteLegal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QtdEmprestimosAtivosSuspensos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("RMCAtivo")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TelefonesAlterados")
+                    b.Property<int?>("RequisicaoID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TelefonesCriados")
-                        .HasColumnType("int");
+                    b.Property<string>("Situacao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SolicitacaoID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UFBeneficio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
-                    b.ToTable("ArquivoImportado");
+                    b.ToTable("ResultadosIN100");
                 });
 
             modelBuilder.Entity("Kontatus.Domain.Entity.Endereco", b =>
@@ -128,16 +200,13 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Bairro")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cidade")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Complemento")
-                        .HasMaxLength(100)
-                        .HasColumnType("VARCHAR(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
@@ -146,8 +215,7 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DescricaoEndereco")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PessoaId")
                         .HasColumnType("int");
@@ -295,8 +363,7 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("CPF")
-                        .HasMaxLength(20)
-                        .HasColumnType("VARCHAR(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
@@ -305,19 +372,87 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DataNascimento")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Idade")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
-                        .HasMaxLength(150)
-                        .HasColumnType("VARCHAR(150)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.ToTable("Pessoa");
+                });
+
+            modelBuilder.Entity("Kontatus.Domain.Entity.SolicitacaoIN100", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("CreditoExtrato")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NumeroBeneficio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SolicitacaoID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StatusProcessamento")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UsuarioID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UsuarioID");
+
+                    b.ToTable("SolicitacoesIN100");
+                });
+
+            modelBuilder.Entity("Kontatus.Domain.Entity.SolicitacaoOffline", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("CPF")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("NumeroBeneficio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("UsuarioID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UsuarioID");
+
+                    b.ToTable("SolicitacoesOffline");
                 });
 
             modelBuilder.Entity("Kontatus.Domain.Entity.Telefone", b =>
@@ -337,8 +472,7 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NumeroTelefone")
-                        .HasMaxLength(20)
-                        .HasColumnType("VARCHAR(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PessoaId")
                         .HasColumnType("int");
@@ -481,6 +615,24 @@ namespace Kontatus.Data.Migrations
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Kontatus.Domain.Entity.SolicitacaoIN100", b =>
+                {
+                    b.HasOne("Kontatus.Domain.Entity.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Kontatus.Domain.Entity.SolicitacaoOffline", b =>
+                {
+                    b.HasOne("Kontatus.Domain.Entity.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID");
 
                     b.Navigation("Usuario");
                 });

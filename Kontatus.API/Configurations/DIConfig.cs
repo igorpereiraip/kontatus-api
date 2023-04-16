@@ -36,14 +36,13 @@ namespace Kontatus.API.Configurations
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<ILogUsuarioService, LogUsuarioService>();
-            services.AddScoped<IPesquisaService, PesquisaService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IArquivoService, ArquivoService>();
             services.AddScoped<IBlobStorageService, BlobStorageService>();
-            services.AddScoped<ISolicitacaoIN100Service, SolicitacaoIN100Service>();
-            services.AddScoped<IDadosIN100Service, DadosIN100Service>();
-            services.AddScoped<ISolicitacaoOfflineService, SolicitacaoOfflineService>();
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IPessoaService, PessoaService>();
+            services.AddScoped<ITelefoneService, TelefoneService>();
+            services.AddScoped<IEnderecoService, EnderecoService>();
         }
 
         private static void ResolveRepositoriesDependencies(IServiceCollection services)
@@ -53,10 +52,10 @@ namespace Kontatus.API.Configurations
             services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<ILogUsuarioRepository, LogUsuarioRepository>();
             services.AddScoped<IArquivoRepository, ArquivoRepository>();
-            services.AddScoped<ISolicitacaoIN100Repository, SolicitacaoIN100Repository>();
-            services.AddScoped<IDadosIN100Repository, DadosIN100Repository>();
-            services.AddScoped<ISolicitacaoOfflineRepository, SolicitacaoOfflineRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
+            services.AddScoped<IPessoaRepository, PessoaRepository>();
+            services.AddScoped<ITelefoneRepository, TelefoneRepository>();
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();
         }
 
         private static void ResolveFiltersDependencies(IServiceCollection services)

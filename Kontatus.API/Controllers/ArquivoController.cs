@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.IO;
 using Kontatus.API.Configurations;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using ExcelDataReader;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 
 namespace Kontatus.API.Controllers
 {
@@ -38,10 +42,53 @@ namespace Kontatus.API.Controllers
 
                 return file;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
+                var z = ex.Message;
                 return null;
             }
+        }
+        [HttpPost("ImportXLS")]
+        [RequestFormLimits(MultipartBodyLengthLimit = 209715200)]
+        public async Task<Result<bool>> ImportExcelAsync([FromForm] ArquivoDTO arquivoDTO)
+        {
+            //System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+            using (var stream = arquivoDTO.Arquivos[0].OpenReadStream())
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    while (reader.Read())
+                    {
+                        try
+                        {
+                            var nome = reader.GetValue(3).ToString();
+                            var cpf = reader.GetValue(5).ToString();
+                            var ddd = reader.GetValue(1).ToString();
+                            var numeroTelefone = reader.GetValue(2).ToString();
+
+                            var pessoa = new Pessoa()
+                            {
+                                Nome = nome,
+                                CPF = cpf,
+                                Idade = 0
+                            };
+                            var telefone = new Telefone()
+                            {
+                                NumeroTelefone = ddd + numeroTelefone,
+                            };
+
+                            var result = await service.ImportarXLS(pessoa, telefone);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+
+
+                    }
+                }
+            }
+            return Result<bool>.Ok(true);
         }
 
     }

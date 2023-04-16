@@ -51,7 +51,7 @@ namespace Kontatus.API
             });
 
 
-            ConfigureEmail(services);
+                 ConfigureEmail(services);
 
             //services.AddSwaggerGen(c =>
             //{

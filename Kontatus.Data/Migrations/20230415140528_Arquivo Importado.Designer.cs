@@ -4,14 +4,16 @@ using Kontatus.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kontatus.Data.Migrations
 {
     [DbContext(typeof(KontatusContext))]
-    partial class KontatusContextModelSnapshot : ModelSnapshot
+    [Migration("20230415140528_Arquivo Importado")]
+    partial class ArquivoImportado
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

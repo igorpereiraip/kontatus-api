@@ -4,14 +4,16 @@ using Kontatus.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kontatus.Data.Migrations
 {
     [DbContext(typeof(KontatusContext))]
-    partial class KontatusContextModelSnapshot : ModelSnapshot
+    [Migration("20230414212513_Att Base")]
+    partial class AttBase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -65,56 +67,6 @@ namespace Kontatus.Data.Migrations
                     b.HasIndex("UsuarioID");
 
                     b.ToTable("Arquivo");
-                });
-
-            modelBuilder.Entity("Kontatus.Domain.Entity.ArquivoImportado", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Competencia")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
-
-                    b.Property<DateTime?>("DataAlteracao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Descricao")
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR(50)");
-
-                    b.Property<int?>("EnderecosAlterados")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("EnderecosCriados")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PessoasAdicionadas")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PessoasAlteradas")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StatusProcessamento")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TelefonesAlterados")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TelefonesCriados")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("ArquivoImportado");
                 });
 
             modelBuilder.Entity("Kontatus.Domain.Entity.Endereco", b =>
