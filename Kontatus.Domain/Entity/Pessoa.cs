@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Kontatus.Domain.Entity
@@ -17,9 +15,12 @@ namespace Kontatus.Domain.Entity
         public string CPF { get; set; }
 
         [Column(TypeName = "VARCHAR")]
-        [StringLength(50)]
+        [StringLength(30)]
         public string DataNascimento { get; set; }
-        public int Idade { get; set; }
+
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(1)]
+        public string Sexo { get; set; }
         public bool Aposentado { get; set; }
 
     }

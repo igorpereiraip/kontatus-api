@@ -15,10 +15,8 @@ namespace Kontatus.Domain.Entity
         public string Descricao { get; set; }
         public StatusProcessamentoEnum StatusProcessamento { get; set; }
         public int? PessoasAdicionadas { get; set; }
-        public int? PessoasAlteradas { get; set; }
-        public int? EnderecosAlterados { get; set; }
         public int? EnderecosCriados { get; set; }
         public int? TelefonesCriados { get; set; }
-        public int? TelefonesAlterados { get; set; }
+        public int? EmailsCriados { get; set; }
     }
 }

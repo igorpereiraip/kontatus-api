@@ -4,14 +4,16 @@ using Kontatus.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kontatus.Data.Migrations
 {
     [DbContext(typeof(KontatusContext))]
-    partial class KontatusContextModelSnapshot : ModelSnapshot
+    [Migration("20230418140524_sexo")]
+    partial class sexo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,36 +113,6 @@ namespace Kontatus.Data.Migrations
                     b.ToTable("ArquivoImportado");
                 });
 
-            modelBuilder.Entity("Kontatus.Domain.Entity.Cachorro", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CorPelo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DataAlteracao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("NumeroPatas")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Raca")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Cachorros");
-                });
-
             modelBuilder.Entity("Kontatus.Domain.Entity.Email", b =>
                 {
                     b.Property<int>("ID")
@@ -202,8 +174,8 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("VARCHAR(50)");
 
                     b.Property<string>("Complemento")
-                        .HasMaxLength(30)
-                        .HasColumnType("VARCHAR(30)");
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(50)");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime2");
@@ -212,8 +184,8 @@ namespace Kontatus.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DescricaoEndereco")
-                        .HasMaxLength(100)
-                        .HasColumnType("VARCHAR(100)");
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(50)");
 
                     b.Property<int>("PessoaId")
                         .HasColumnType("int");

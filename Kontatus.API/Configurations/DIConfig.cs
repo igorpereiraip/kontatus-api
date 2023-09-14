@@ -43,6 +43,8 @@ namespace Kontatus.API.Configurations
             services.AddScoped<IPessoaService, PessoaService>();
             services.AddScoped<ITelefoneService, TelefoneService>();
             services.AddScoped<IEnderecoService, EnderecoService>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IArquivoImportadoService, ArquivoImportadoService>();
         }
 
         private static void ResolveRepositoriesDependencies(IServiceCollection services)
@@ -56,6 +58,8 @@ namespace Kontatus.API.Configurations
             services.AddScoped<IPessoaRepository, PessoaRepository>();
             services.AddScoped<ITelefoneRepository, TelefoneRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            services.AddScoped<IArquivoImportadoRepository, ArquivoImportadoRepository>();
+            services.AddScoped<IEmailRepository, EmailRepository>();
         }
 
         private static void ResolveFiltersDependencies(IServiceCollection services)

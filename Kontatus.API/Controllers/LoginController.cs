@@ -56,9 +56,9 @@ namespace Kontatus.API.Controllers
         {
             try
             {
-                var tokenConfig = mapper.Map<TokenConfigViewModel>(await (service as ILoginService).Authenticate(login.Email, login.Senha));
+                var tokenConfig = mapper.Map<TokenConfigViewModel>(await (service as ILoginService).Authenticate(login.Login, login.Password));
 
-                if (string.IsNullOrEmpty(tokenConfig.JWT))
+                if (string.IsNullOrEmpty(tokenConfig.Access))
                     return Result<TokenConfigViewModel>.Err("As credenciais informadas não são válidas");
 
                 return Result<TokenConfigViewModel>.Ok(tokenConfig);

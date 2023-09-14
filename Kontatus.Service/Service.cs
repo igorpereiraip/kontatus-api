@@ -31,6 +31,10 @@ namespace Kontatus.Service
             this.repository = repository;
         }
 
+        public Service()
+        {
+        }
+
         public virtual async Task<T> Create(T entidade)
         {
             return await repository.Create(entidade);

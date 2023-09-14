@@ -25,18 +25,36 @@ namespace Kontatus.API.Controllers
   public abstract class Controller<T> : ControllerBase, IController<T> where T : Kontatus.Domain.Entity.Base, new()
   {
     protected readonly IService<T> service;
+        private IPessoaService service1;
+        private ITelefoneService service2;
+        private IEnderecoService service3;
 
-    protected Controller(IService<T> service)
+        protected Controller(IService<T> service)
     {
       this.service = service;
     }
 
-    /// <summary>
-    /// Retorna todos os registros
-    /// </summary>
-    /// <param name="basico">Indica se deve ser enviado apenas as informações basicas de cada registro</param>
-    /// <returns>Array de todos os registros</returns>
-    [HttpGet]
+        protected Controller(IPessoaService service1)
+        {
+            this.service1 = service1;
+        }
+
+        protected Controller(ITelefoneService service2)
+        {
+            this.service2 = service2;
+        }
+
+        protected Controller(IEnderecoService service3)
+        {
+            this.service3 = service3;
+        }
+
+        /// <summary>
+        /// Retorna todos os registros
+        /// </summary>
+        /// <param name="basico">Indica se deve ser enviado apenas as informações basicas de cada registro</param>
+        /// <returns>Array de todos os registros</returns>
+        [HttpGet]
     public virtual async Task<Result<IEnumerable<T>>> List([FromQuery] bool? basico)
     {
       try

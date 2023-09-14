@@ -4,14 +4,16 @@ using Kontatus.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kontatus.Data.Migrations
 {
     [DbContext(typeof(KontatusContext))]
-    partial class KontatusContextModelSnapshot : ModelSnapshot
+    [Migration("20230418144944_tamanho descricao endereco")]
+    partial class tamanhodescricaoendereco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,36 +111,6 @@ namespace Kontatus.Data.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ArquivoImportado");
-                });
-
-            modelBuilder.Entity("Kontatus.Domain.Entity.Cachorro", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("CorPelo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("DataAlteracao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("NumeroPatas")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Raca")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Cachorros");
                 });
 
             modelBuilder.Entity("Kontatus.Domain.Entity.Email", b =>

@@ -17,11 +17,6 @@ namespace Kontatus.Domain.Entity
 
         public virtual ICollection<Login> Logins { get; set; }
 
-        public int SaldoIN100 { get; set; }
-        public int SaldoExtrato { get; set; }
-        public int? SaldoOffline  { get; set; }
-        public bool? OfflineIlimitado { get; set; }
-        public int? LimiteDiario { get; set; }
         public int? AcessosSimultaneos { get; set; }
         public DateTime? ValidadePlano { get; set; }
     }

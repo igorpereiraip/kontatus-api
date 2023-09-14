@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
     <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
   </ItemGroup>
 

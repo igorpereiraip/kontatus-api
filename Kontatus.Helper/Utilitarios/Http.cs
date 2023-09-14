@@ -8,7 +8,7 @@ namespace Kontatus.Helper.Utilitarios
     {
         public static JwtSecurityToken ExtractJwtFromHeader(this IHeaderDictionary headers)
         {
-            if (headers.TryGetValue("Authorization", out var authorization))
+            if (headers.TryGetValue("access", out var authorization))
             {
                 var jwt = authorization[0];
                 if (jwt is null)

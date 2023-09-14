@@ -8,6 +8,7 @@ namespace Kontatus.Data.Repository
 {
     public interface IEnderecoRepository : IRepository<Endereco>
     {
+        Task<bool> CreateRange(List<Endereco> enderecos);
     }
     public class EnderecoRepository : Repository<Endereco>, IEnderecoRepository
     {
@@ -15,36 +16,14 @@ namespace Kontatus.Data.Repository
         {
         }
 
-        //public async Task<int> Teste()
-        //{
+        public async Task<bool> CreateRange(List<Endereco> enderecos)
+        {
+            await context.Enderecos.AddRangeAsync(enderecos);
 
-        //    var x = 0;
+            await context.SaveChangesAsync();
 
-        //    var list = new List<Pessoa>();
+            return true;
+        }
 
-        //    while (x < 100000)
-        //    {
-        //        var pessoa = new Pessoa
-        //        {
-        //            Nome = "Igor Teste",
-        //            CPF = "09342878997",
-        //            DataNascimento = "07/01/1995",
-        //            Idade = x,
-        //            Aposentado = true
-        //        };
-
-        //        list.Add(pessoa);
-
-
-        //        x++;
-        //    }
-        //    await context.Pessoas.AddRangeAsync(list);
-
-        //    await context.SaveChangesAsync();
-
-
-
-        //    return x;
-        //}
     }
 }

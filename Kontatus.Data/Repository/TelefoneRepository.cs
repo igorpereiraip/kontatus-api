@@ -8,6 +8,7 @@ namespace Kontatus.Data.Repository
 {
     public interface ITelefoneRepository : IRepository<Telefone>
     {
+        Task<bool> CreateRange(List<Telefone> telefones);
     }
     public class TelefoneRepository : Repository<Telefone>, ITelefoneRepository
     {
@@ -15,36 +16,13 @@ namespace Kontatus.Data.Repository
         {
         }
 
-        //public async Task<int> Teste()
-        //{
+        public async Task<bool> CreateRange(List<Telefone> telefones)
+        {
+            await context.Telefones.AddRangeAsync(telefones);
 
-        //    var x = 0;
+            await context.SaveChangesAsync();
 
-        //    var list = new List<Pessoa>();
-
-        //    while (x < 100000)
-        //    {
-        //        var pessoa = new Pessoa
-        //        {
-        //            Nome = "Igor Teste",
-        //            CPF = "09342878997",
-        //            DataNascimento = "07/01/1995",
-        //            Idade = x,
-        //            Aposentado = true
-        //        };
-
-        //        list.Add(pessoa);
-
-
-        //        x++;
-        //    }
-        //    await context.Pessoas.AddRangeAsync(list);
-
-        //    await context.SaveChangesAsync();
-
-
-
-        //    return x;
-        //}
+            return true;
+        }
     }
 }

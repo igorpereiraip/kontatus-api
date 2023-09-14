@@ -15,11 +15,19 @@ namespace Kontatus.Domain.Entity
         [StringLength(50)]
         public string Bairro { get; set; }
         [Column(TypeName = "VARCHAR")]
-        [StringLength(50)]
+        [StringLength(100)]
         public string DescricaoEndereco { get; set; }
         [Column(TypeName = "VARCHAR")]
-        [StringLength(100)]
+        [StringLength(30)]
         public string Complemento { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(10)]
+        public string Cep { get; set; }
+        [Column(TypeName = "VARCHAR")]
+        [StringLength(2)]
+        public string Uf { get; set; }
+        public int ArquivoImportadoId { get; set; }
+        public virtual ArquivoImportado ArquivoImportado { get; set; }
         public virtual Pessoa Pessoa { get; set; }
 
     }

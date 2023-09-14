@@ -1,6 +1,7 @@
 ﻿using Kontatus.Data.Repository;
 using Kontatus.Domain.Entity;
 using Kontatus.Helper.Utilitarios;
+using System;
 using System.Threading.Tasks;
 
 namespace Kontatus.Service
@@ -18,11 +19,13 @@ namespace Kontatus.Service
         private readonly ILoginRepository _loginRepository;
         private readonly ITokenRepository _tokenRepository;
         private readonly LoginDomainService _loginDomainService;
+        private readonly IUsuarioRepository _usuarioRepository;
 
         public LoginService(
             ILoginRepository repository,
             ITokenRepository tokenRepository,
             ILoginRepository loginRepository,
+            IUsuarioRepository usuarioRepository,
             LoginDomainService loginDomainService
             )
             : base(repository)
@@ -30,6 +33,7 @@ namespace Kontatus.Service
             _loginDomainService = loginDomainService;
             _tokenRepository = tokenRepository;
             _loginRepository = loginRepository;
+            _usuarioRepository = usuarioRepository;
         }
 
         public async Task<TokenConfig> Authenticate(string email, string senha)
@@ -38,14 +42,16 @@ namespace Kontatus.Service
             TokenConfig tokenConfig = new TokenConfig();
 
             Login login = _loginRepository.Authenticate(email, senha).Result;
+            var usuario = await _usuarioRepository.Obter(login.UsuarioID);
+            var expiration = DateTime.UtcNow.AddDays(1);
 
-            await _loginDomainService.RealizarLogin(tokenConfig, login, email);
+            await _loginDomainService.RealizarLogin(tokenConfig, login, email, usuario, expiration);
 
             var token = new Token()
             {
-                UsuarioID = tokenConfig.Usuario.ID,
-                DataExpiracao = tokenConfig.Expiration,
-                JWT = tokenConfig.JWT,
+                UsuarioID = usuario.ID,
+                DataExpiracao = expiration,
+                JWT = tokenConfig.Access,
             };
 
             await _tokenRepository.Create(token);
@@ -67,8 +73,10 @@ namespace Kontatus.Service
             TokenConfig tokenConfig = new TokenConfig();
 
             var login = await _loginRepository.RefreshAuthenticate(loginID);
+            var usuario = await _usuarioRepository.Obter(login.UsuarioID);
+            var expiration = DateTime.UtcNow.AddDays(1);
 
-            await _loginDomainService.RealizarLogin(tokenConfig, login, login.Email);
+            await _loginDomainService.RealizarLogin(tokenConfig, login, login.Email, usuario, expiration);
 
             return tokenConfig;
         }

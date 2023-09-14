@@ -21,9 +21,7 @@ namespace Kontatus.Data.Repository
         Task<UsuarioDTO> ActivateUsuario(int id);
         Task<Usuario> Obter(int id);
         Task<List<Usuario>> GetUsuarios();
-        Task<Usuario> AdicionarSaldoIN100(int id, int valor);
-        Task<Usuario> AdicionarSaldoExtrato(int id, int valor);
-        Task<Usuario> AdicionarSaldoOffline(int id, int valor);
+
     }
     public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
     {
@@ -42,11 +40,21 @@ namespace Kontatus.Data.Repository
             return usuarios;
         }
 
+
+
         public async Task<Usuario> Create(UsuarioDTO usuarioDTO)
         {
+            var cachorroExiste = context.Cachorros.Where(x => x.Raca == usuarioDTO.Nome).Any();
+
+            var usuarios = context.Usuarios.Where(x => x.Nome == "Jadson").ToList();
+
+            
+
             //TODO: Verificar comportamento
             //await VerificarSeExisteUsuarioDoTipo(usuarioDTO);
             var loginExists = await context.Logins.Where(l => l.Email == usuarioDTO.Email && l.Ativo == true).FirstOrDefaultAsync();
+
+
 
             if (loginExists != null)
             {
@@ -59,11 +67,6 @@ namespace Kontatus.Data.Repository
                 Ativo = true,
                 DataCadastro = DateTime.UtcNow,
                 Nome = usuarioDTO.Nome,
-                SaldoIN100 = usuarioDTO.SaldoIN100,
-                SaldoExtrato = usuarioDTO.SaldoExtrato,
-                SaldoOffline = usuarioDTO.SaldoOffline,
-                LimiteDiario = usuarioDTO.LimiteDiario,
-                OfflineIlimitado = usuarioDTO.OfflineIlimitado,
                 AcessosSimultaneos = 1,
                 ValidadePlano = usuarioDTO.ValidadePlano,
             };
@@ -125,11 +128,6 @@ namespace Kontatus.Data.Repository
                     usuario.Administrador = usuarioDTO.Administrador;
                     usuario.DataAlteracao = DateTime.UtcNow;
                     usuario.Nome = usuarioDTO.Nome;
-                    usuario.SaldoIN100 = usuarioDTO.SaldoIN100;
-                    usuario.SaldoExtrato = usuarioDTO.SaldoExtrato;
-                    usuario.SaldoOffline = usuarioDTO.SaldoOffline;
-                    usuario.LimiteDiario = usuarioDTO.LimiteDiario;
-                    usuario.OfflineIlimitado = usuarioDTO.OfflineIlimitado;
                     usuario.AcessosSimultaneos = usuarioDTO.AcessosSimultaneos;
                     usuario.ValidadePlano = usuarioDTO.ValidadePlano;
 
@@ -306,110 +304,6 @@ namespace Kontatus.Data.Repository
             }
         }
 
-        public async Task<Usuario> AdicionarSaldoIN100(int id, int valor)
-        {
-            Usuario usuario = null;
-
-            using (var trans = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    usuario = context.Usuarios.Find(id);
-
-                    if (usuario != null)
-                    {
-                        usuario.SaldoIN100 += valor;
-                        usuario.DataAlteracao = DateTime.UtcNow;
-
-                        context.Entry(usuario).State = EntityState.Modified;
-                        context.SaveChanges();
-
-                    }
-
-                    await context.SaveChangesAsync();
-
-                    trans.Commit();
-                    AtribuirLogsAntigo(usuario);
-                    return usuario;
-                }
-                catch (Exception)
-                {
-                    trans.Rollback();
-
-                    return null;
-                }
-            }
-        }
-
-        public async Task<Usuario> AdicionarSaldoExtrato(int id, int valor)
-        {
-            Usuario usuario = null;
-
-            using (var trans = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    usuario = context.Usuarios.Find(id);
-
-                    if (usuario != null)
-                    {
-                        usuario.SaldoExtrato += valor;
-                        usuario.DataAlteracao = DateTime.UtcNow;
-
-                        context.Entry(usuario).State = EntityState.Modified;
-                        context.SaveChanges();
-
-                    }
-
-                    await context.SaveChangesAsync();
-
-                    trans.Commit();
-                    AtribuirLogsAntigo(usuario);
-                    return usuario;
-                }
-                catch (Exception)
-                {
-                    trans.Rollback();
-
-                    return null;
-                }
-            }
-        }
-
-        public async Task<Usuario> AdicionarSaldoOffline(int id, int valor)
-        {
-            Usuario usuario = null;
-
-            using (var trans = context.Database.BeginTransaction())
-            {
-                try
-                {
-                    usuario = context.Usuarios.Find(id);
-
-                    if (usuario != null)
-                    {
-                        usuario.SaldoOffline += valor;
-                        usuario.DataAlteracao = DateTime.UtcNow;
-
-                        context.Entry(usuario).State = EntityState.Modified;
-                        context.SaveChanges();
-
-                    }
-
-                    await context.SaveChangesAsync();
-
-                    trans.Commit();
-                    AtribuirLogsAntigo(usuario);
-                    return usuario;
-                }
-                catch (Exception)
-                {
-                    trans.Rollback();
-
-                    return null;
-                }
-            }
-        }
 
 
         public async Task<UsuarioDTO> UpdatePassword(string email)

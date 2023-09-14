@@ -3,29 +3,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Kontatus.Domain.Entity
 {
-    [Table("Telefone")]
-    public class Telefone : Base
+    [Table("Email")]
+    public class Email : Base
     {
         public int PessoaId { get; set; }
 
         [Column(TypeName = "VARCHAR")]
-        [StringLength(20)]
-        public string NumeroTelefone { get; set; }     
-        public bool Whatsapp { get; set; }
+        [StringLength(60)]
+        public string EnderecoEmail { get; set; }
         public int ArquivoImportadoId { get; set; }
         public virtual ArquivoImportado ArquivoImportado { get; set; }
         public virtual Pessoa Pessoa { get; set; }
-
-    }
-
-
-
-
-    public class Cachorro : Base
-    {
-        public int NumeroPatas { get; set; }
-        public string CorPelo { get; set; }
-        public string Raca { get; set; }
 
     }
 }

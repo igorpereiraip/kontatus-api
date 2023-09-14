@@ -13,11 +13,6 @@ namespace Kontatus.Domain.DTO
         public string Senha { get; set; }
         public bool Administrador { get; set; }
         public bool Ativo { get; set; }
-        public int SaldoIN100 { get; set; }
-        public int SaldoExtrato { get; set; }
-        public int? SaldoOffline { get; set; }
-        public bool? OfflineIlimitado { get; set; }
-        public int? LimiteDiario { get; set; }
         public int? AcessosSimultaneos { get; set; }
         public DateTime? ValidadePlano { get; set; }
 

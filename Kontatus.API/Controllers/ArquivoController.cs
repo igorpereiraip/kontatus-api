@@ -1,19 +1,18 @@
 ﻿using AutoMapper;
-using Kontatus.Domain.ViewModels;
 using Kontatus.Helper.Utilitarios;
 using Kontatus.Service;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.IO;
 using Kontatus.API.Configurations;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Http;
 using ExcelDataReader;
 using Kontatus.Domain.DTO;
 using Kontatus.Domain.Entity;
+using System.Data;
+using System.IO;
+using Microsoft.VisualBasic.FileIO;
+using System.Collections.Generic;
 
 namespace Kontatus.API.Controllers
 {
@@ -23,11 +22,13 @@ namespace Kontatus.API.Controllers
     public class ArquivoController: ControllerBase
     {
         private readonly IArquivoService service;
+        private readonly IArquivoImportadoService arquivoImportadoService;
         private readonly IMapper mapper;
 
-        public ArquivoController(IArquivoService service, IMapper mapper)
+        public ArquivoController(IArquivoService service, IArquivoImportadoService arquivoImportadoService, IMapper mapper)
         {
             this.service = service;
+            this.arquivoImportadoService = arquivoImportadoService;
             this.mapper = mapper;
         }
 
@@ -52,43 +53,76 @@ namespace Kontatus.API.Controllers
         [RequestFormLimits(MultipartBodyLengthLimit = 209715200)]
         public async Task<Result<bool>> ImportExcelAsync([FromForm] ArquivoDTO arquivoDTO)
         {
-            //System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-            using (var stream = arquivoDTO.Arquivos[0].OpenReadStream())
+            try
             {
-                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                //using (var stream = arquivoDTO.Arquivos[0].OpenReadStream())
+                //{
+                //    using (var reader = ExcelReaderFactory.CreateReader(stream))
+                //    {
+                //var arquivoImportado = await arquivoImportadoService.CreateArquivoImportado(arquivoDTO.Competencia, arquivoDTO.Descricao);
+                //var arquivoImportadoManipular = new ArquivoImportado()
+                //{
+                //    ID = arquivoImportado.ID,
+                //    Competencia = arquivoImportado.Competencia,
+                //    Descricao = arquivoImportado.Descricao,
+                //    StatusProcessamento = arquivoImportado.StatusProcessamento,
+                //    EmailsCriados = 0,
+                //    EnderecosCriados = 0,
+                //    PessoasAdicionadas = 0,
+                //    TelefonesCriados = 0
+                //};
+
+                //arquivoImportadoManipular = await arquivoImportadoService.ImportarXLSLote(reader, arquivoImportadoManipular);
+
+                //        await arquivoImportadoService.UpdateArquivoImportado(arquivoImportadoManipular);
+                //    }
+                //}
+
+                using (var stream = arquivoDTO.Arquivos[0].OpenReadStream())
                 {
-                    while (reader.Read())
-                    {
-                        try
-                        {
-                            var nome = reader.GetValue(3).ToString();
-                            var cpf = reader.GetValue(5).ToString();
-                            var ddd = reader.GetValue(1).ToString();
-                            var numeroTelefone = reader.GetValue(2).ToString();
+                    var data = new List<string[]>();
+                    using (TextFieldParser parser = new TextFieldParser(stream))
+                    {               
+                        parser.TextFieldType = FieldType.Delimited;
+                        parser.SetDelimiters(",");
 
-                            var pessoa = new Pessoa()
-                            {
-                                Nome = nome,
-                                CPF = cpf,
-                                Idade = 0
-                            };
-                            var telefone = new Telefone()
-                            {
-                                NumeroTelefone = ddd + numeroTelefone,
-                            };
-
-                            var result = await service.ImportarXLS(pessoa, telefone);
-                        }
-                        catch (Exception ex)
+                        while (!parser.EndOfData)
                         {
-                            Console.WriteLine(ex.Message);
+                            // Parse each line of the CSV file
+                            string[] fields = parser.ReadFields();
+                            data.Add(fields);
                         }
 
+                        var arquivoImportado = await arquivoImportadoService.CreateArquivoImportado(arquivoDTO.Competencia, arquivoDTO.Descricao);
+                        var arquivoImportadoManipular = new ArquivoImportado()
+                        {
+                            ID = arquivoImportado.ID,
+                            Competencia = arquivoImportado.Competencia,
+                            Descricao = arquivoImportado.Descricao,
+                            StatusProcessamento = arquivoImportado.StatusProcessamento,
+                            EmailsCriados = 0,
+                            EnderecosCriados = 0,
+                            PessoasAdicionadas = 0,
+                            TelefonesCriados = 0
+                        };
 
+                        arquivoImportadoManipular = await arquivoImportadoService.ImportarXLSLote(data, arquivoImportadoManipular);
                     }
+
+
+
+
                 }
+                return Result<bool>.Ok(true);
+
+
+
             }
-            return Result<bool>.Ok(true);
+            catch(Exception e)
+            {
+                return Result<bool>.Err(e.Message);
+            }
+
         }
 
     }

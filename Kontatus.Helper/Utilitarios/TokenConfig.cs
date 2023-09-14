@@ -6,9 +6,7 @@ namespace Kontatus.Helper.Utilitarios
 {
     public class TokenConfig
     {
-        public string JWT { get; set; }
-        public DateTime Expiration { get; set; }
-        public Login Login { get; set; }
-        public Usuario Usuario { get; set; }
+        public string Access { get; set; }
+        public string Refresh { get; set; }
     }
 }

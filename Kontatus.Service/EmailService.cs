@@ -1,6 +1,10 @@
-﻿using Kontatus.Domain.DTO;
+﻿using Kontatus.Data.Repository;
+using Kontatus.Domain.DTO;
+using Kontatus.Domain.Entity;
 using Kontatus.Helper.Utilitarios;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,19 +16,35 @@ namespace Kontatus.Service
     public interface IEmailService
     {
         Task EnviarEmailNovoUsuario(string nome, string email, string senha);
+        Task<bool> ValidateEmailAsync(Email email, List<Email> listEmail);
+        Task<bool> CreateRange(List<Email> emails);
     }
 
-    public class EmailService : IEmailService
+    public class EmailService : Service<Email>, IEmailService
     {
         private readonly IEmailSender _emailSender;
         private readonly IConfiguration _config;
         private readonly ILogUsuarioService _logUsuarioService;
-
-        public EmailService(IEmailSender emailSender, IConfiguration config, ILogUsuarioService logUsuarioService)
+        private readonly IEmailRepository repository;
+        public EmailService(IEmailSender emailSender, IConfiguration config, ILogUsuarioService logUsuarioService, IEmailRepository repository) : base()
         {
             _emailSender = emailSender;
             _config = config;
             _logUsuarioService = logUsuarioService;
+            this.repository = repository;
+        }
+
+        public async Task<bool> CreateRange(List<Email> emails)
+        {
+            await repository.CreateRange(emails);
+            return true;
+        }
+
+        public async Task<bool> ValidateEmailAsync(Email email, List<Email> listEmail)
+        {
+            return !String.IsNullOrEmpty(email.EnderecoEmail) && email.EnderecoEmail.Contains("@") &&
+                listEmail.Find(z => z.PessoaId == email.PessoaId && z.EnderecoEmail == email.EnderecoEmail) == null &&
+                !await repository.Find(x => x.PessoaId == email.PessoaId && x.EnderecoEmail == email.EnderecoEmail).AnyAsync();
         }
 
         public async Task EnviarEmailNovoUsuario(string nome, string email, string senha)

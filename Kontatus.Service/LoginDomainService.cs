@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Kontatus.Helper.Utilitarios;
 using Kontatus.Domain.Entity;
 using Kontatus.Data.Repository;
+using System.Text.Json;
 
 namespace Kontatus.Service
 {
@@ -22,24 +23,23 @@ namespace Kontatus.Service
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task RealizarLogin(TokenConfig tokenConfig, Login login, string email)
+        public async Task RealizarLogin(TokenConfig tokenConfig, Login login, string email, Usuario usuario, DateTime expiration)
         {
             if (login != null)
             {
-                var usuario = await _usuarioRepository.Obter(login.UsuarioID);
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.UniqueName, email),
-                    new Claim("loginID", login.ID.ToString()),
-                    new Claim("usuarioID", login.UsuarioID.ToString()),
-                    new Claim("administrador", usuario.Administrador.ToString()),
+                    new Claim("login", JsonSerializer.Serialize(login)),
+                    new Claim("user", JsonSerializer.Serialize(usuario)),
+                    new Claim("exp", JwtRegisteredClaimNames.Exp, ((DateTimeOffset)expiration).ToUnixTimeSeconds().ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("JWT:Key").ToString()));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-                var expiration = DateTime.UtcNow.AddDays(1);
+
                 JwtSecurityToken token = new JwtSecurityToken(
                    issuer: null,
                    audience: null,
@@ -48,10 +48,8 @@ namespace Kontatus.Service
                    signingCredentials: creds);
 
 
-                tokenConfig.JWT = new JwtSecurityTokenHandler().WriteToken(token);
-                tokenConfig.Expiration = expiration;
-                tokenConfig.Login = login;
-                tokenConfig.Usuario = usuario;
+                tokenConfig.Access = new JwtSecurityTokenHandler().WriteToken(token);
+                tokenConfig.Refresh = new JwtSecurityTokenHandler().WriteToken(token);
             }
         }
     }
