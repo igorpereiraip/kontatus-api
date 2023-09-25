@@ -44,8 +44,6 @@ namespace Kontatus.Data.Repository
 
         public async Task<Usuario> Create(UsuarioDTO usuarioDTO)
         {
-            var cachorroExiste = context.Cachorros.Where(x => x.Raca == usuarioDTO.Nome).Any();
-
             var usuarios = context.Usuarios.Where(x => x.Nome == "Jadson").ToList();
 
             

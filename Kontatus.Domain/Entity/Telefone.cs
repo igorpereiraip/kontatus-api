@@ -18,14 +18,4 @@ namespace Kontatus.Domain.Entity
 
     }
 
-
-
-
-    public class Cachorro : Base
-    {
-        public int NumeroPatas { get; set; }
-        public string CorPelo { get; set; }
-        public string Raca { get; set; }
-
-    }
 }

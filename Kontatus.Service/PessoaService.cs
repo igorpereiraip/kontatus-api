@@ -13,6 +13,8 @@ namespace Kontatus.Service
         Task<bool> CreateRange(List<Pessoa> listPessoa);
         Task<Pessoa> GetByCpf(string cpf);
         Task<bool> ValidatePessoaAsync(Pessoa pessoa, List<Pessoa> listPessoa);
+        Task<List<Pessoa>> GetPersonByName(string name, string uf, string year);
+        Task<List<Pessoa>> GetPersonByCpf(string cpf);
     }
 
     public class PessoaService : Service<Pessoa>, IPessoaService
@@ -45,6 +47,16 @@ namespace Kontatus.Service
         public async Task<Pessoa> GetByCpf(string cpf)
         {
             return await repository.Find(x => x.CPF == cpf && x.Ativo).FirstOrDefaultAsync() ;
+        }
+
+        public async Task<List<Pessoa>> GetPersonByName(string name, string uf, string year)
+        {
+            return await repository.GetPersonByName(name, uf, year);
+        }
+
+        public async Task<List<Pessoa>> GetPersonByCpf(string cpf)
+        {
+            return await repository.GetPersonByCpf(cpf);
         }
     }
 }

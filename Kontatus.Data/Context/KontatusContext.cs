@@ -18,6 +18,5 @@ namespace Kontatus.Data.Context
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<ArquivoImportado> ArquivosImportados { get; set; }
         public DbSet<Email> Emails { get; set; }
-        public DbSet<Cachorro> Cachorros { get; set; }
     }
 }

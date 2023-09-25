@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Kontatus.Domain.Entity
@@ -22,6 +23,9 @@ namespace Kontatus.Domain.Entity
         [StringLength(1)]
         public string Sexo { get; set; }
         public bool Aposentado { get; set; }
+        public virtual ICollection<Email> Emails { get; set; }
+        public virtual ICollection<Telefone> Telefones { get; set; }
+        public virtual ICollection<Endereco> Enderecos { get; set; }
 
     }
 }
