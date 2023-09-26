@@ -14,7 +14,7 @@ namespace Kontatus.Domain.Entity
         public bool Whatsapp { get; set; }
         public int ArquivoImportadoId { get; set; }
         public virtual ArquivoImportado ArquivoImportado { get; set; }
-        public virtual Pessoa Pessoa { get; set; }
+        //public virtual Pessoa Pessoa { get; set; }
 
     }
 

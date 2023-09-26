@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Kontatus.Service
 {
-    public interface IPessoaService
-    {
+    public interface IPessoaService : IService<Pessoa>
+	{
         Task<bool> ExistePessoa(string cpf);
         Task<bool> CreateRange(List<Pessoa> listPessoa);
         Task<Pessoa> GetByCpf(string cpf);

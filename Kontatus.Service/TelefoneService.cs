@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Kontatus.Service
 {
-    public interface ITelefoneService
-    {
+    public interface ITelefoneService : IService<Telefone>
+	{
         Task<bool> ValidateTelefoneFullAsync(Telefone telefone, List<Telefone> listTelefone);
         Task<bool> CreateRange(List<Telefone> telefones);
     }

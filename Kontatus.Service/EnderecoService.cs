@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Kontatus.Service
 {
-    public interface IEnderecoService
-    {
+    public interface IEnderecoService : IService<Endereco>
+	{
         Task<bool> ValidateEnderecoAsync(Endereco endereco, List<Endereco> listEndereco);
         Task<bool> CreateRange(List<Endereco> enderecos);
     }

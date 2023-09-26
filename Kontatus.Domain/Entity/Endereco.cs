@@ -28,7 +28,7 @@ namespace Kontatus.Domain.Entity
         public string Uf { get; set; }
         public int ArquivoImportadoId { get; set; }
         public virtual ArquivoImportado ArquivoImportado { get; set; }
-        public virtual Pessoa Pessoa { get; set; }
+        //public virtual Pessoa Pessoa { get; set; }
 
     }
 }
